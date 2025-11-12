@@ -14,14 +14,17 @@ import java.util.Locale;
  *
  * @author reroes
  */
-public class Ejemplo1 {
+public class Ejemplo3 {
 
     public static void main(String[] args) {
         // Condicionales simplesmain
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
       
-        double limiNotas = 6.9;
+        double limiNotas;
+        
+        System.out.println("Ingrese el Limite de notas");
+        limiNotas = entrada.nextDouble();
 
         System.out.println("Ingrese un valor para analizar");
         double promedio = entrada.nextDouble();
