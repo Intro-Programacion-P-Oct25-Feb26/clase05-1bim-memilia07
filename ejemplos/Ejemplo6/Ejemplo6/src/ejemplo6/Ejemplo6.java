@@ -37,7 +37,7 @@ public class Ejemplo6 {
         nombre = entrada.nextLine();
         
         System.out.println("Ingrese sus Apellidos");
-        nombre = entrada.nextLine();
+        apellido = entrada.nextLine();
         
         System.out.println("Ingrese su Usuario");
         usuario = entrada.nextLine();
@@ -53,17 +53,41 @@ public class Ejemplo6 {
         System.out.println("Ingrese su Dia de Pago");
         dia_pago = entrada.nextInt();
         
-        if ((dia_pago<10)&&(parroquia.equals("El Valle")|| parroquia.equals("E| Sagrario")));
+         valor_total = (costo_fijo * descuento);
+         valor_completo = (costo_fijo - valor_total);
+
         
-        
-        
-        
-      
-        
-        
-        
-        
-        
+        if ((dia_pago >= 0 && dia_pago < 10) || ((parroquia.equals("El Valle") || 
+                (parroquia.equals("El Sagrario"))))){
+            System.out.printf("FUERZA TOTAL\nNombre: %s\n"
+                    + "Apellido: %s\n"
+                    + "Usuario: %s\n"
+                    + "Edad: %s\n"
+                    + "Dia de pago: %s\n"
+                    + "Parroquia:%s\n"
+                    + "USTED HA APLICADO AL DESCUENTO: $%.2f\n\n", 
+                    nombre, 
+                    apellido, 
+                    usuario, 
+                    edad, 
+                    dia_pago, 
+                    parroquia, 
+                    valor_total);
+            
+            }else{
+            System.out.printf("FUERZA TOTAL\nNombre: %s\nApellido: "
+                    + "%s\nUsuario: %s\nEdad: %s\nDia de pago: %s\nParroquia: "
+                    + "%s\nMEMBRESIA MENSUAL SIN DESCUENTO: $%.2f\n\n", 
+                    nombre, 
+                    apellido, 
+                    usuario, 
+                    edad, 
+                    dia_pago, 
+                    parroquia, 
+                    valor_completo);
+
+
     }
     
+    }
 }
